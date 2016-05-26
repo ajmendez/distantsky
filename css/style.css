@@ -55,57 +55,6 @@ hr {
 }
 
 
-@keyframes fadeIn { 
-    00%   { opacity:0; }
-    90%  { opacity:1; }
-    100% { opacity:0; } 
-}
-@keyframes fadeIn2 { 
-    30%   { opacity:0; }
-    90%  { opacity:1; }
-    100% { opacity:0; } 
-}
-@keyframes fadeIn3 { 
-    60%   { opacity:0; }
-    90%  { opacity:1; }
-    100% { opacity:0; } 
-}
-.excite {
-    color: white;
-    position: absolute;
-    opacity: 0;
-}
-
-.excite1 {
-    left: 10%;
-    bottom: 10%;
-    text-align:left;
-    -webkit-animation: fadeIn 10s infinite;
-    -moz-animation: fadeIn 10s infinite;
-    -o-animation: fadeIn 10s infinite;
-    animation: fadeIn 10s infinite;
-}
-
-
-.excite2 {
-    left: 40%;
-    bottom: 10%;
-    text-align:center;
-    -webkit-animation: fadeIn2 10s infinite;
-    -moz-animation: fadeIn2 10s infinite;
-    -o-animation: fadeIn2 10s infinite;
-    animation: fadeIn2 10s infinite;
-}
-
-.excite3 {
-    right: 10%;
-    bottom: 10%;
-    text-align:right;
-    -webkit-animation: fadeIn3 10s infinite;
-    -moz-animation: fadeIn3 10s infinite;
-    -o-animation: fadeIn3 10s infinite;
-    animation: fadeIn3 10s infinite;
-}
 
 
 
@@ -116,8 +65,10 @@ hr {
     width:100%;
 }
 
+.tnav .navbar .container { height: 50px; }
+
 .navbar {
-    margin-top:-50px;
+/*    margin-top:-50px;*/
     margin-bottom: 0;
     border:0px solid;
     border-color: white;
@@ -129,7 +80,36 @@ hr {
 .navbar-brand {
     font-weight: 400;
     font-size: 20px;
+	margin: 0px;
 }
+#navmain {
+	position: absolute;
+/*	left:20px;*/
+	top:10px;
+    font-weight: 400;
+    font-size: 20px;
+	margin: 0px;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+	
+/*	opacity:0;*/
+/*	font-size:100px;*/
+}
+#navintro {
+    font-weight: 400;
+    font-size: 20px;
+	margin: 0px;
+	position: absolute;
+/*	left:20px;*/
+	top:10px;
+	color:white;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+/*	fontsize:200;*/
+}
+
 
 .nav.navbar-nav {
     float:right;
@@ -159,6 +139,8 @@ hr {
 }
 
 
+
+
 footer{
     height:200px;
     
@@ -175,11 +157,11 @@ footer p {
 
 
 #intro {
-    height:100%;
-/*    height: calc(100% - 50px);*/
-/*    height: -o-calc(100% - 50px); /* opera */*/
-/*    height: -webkit-calc(100% - 50px); /* google, safari */*/
-/*    height: -moz-calc(100% - 50px); /* firefox*/
+/*    height:100%;*/
+    height: calc(100% - 50px);*/
+    height: -o-calc(100% - 50px); /* opera */
+    height: -webkit-calc(100% - 50px); /* google, safari */
+    height: -moz-calc(100% - 50px); /* firefox
 }
 
 .hero {
@@ -294,7 +276,7 @@ footer p {
 }
 .owl-dots {
     position: absolute;
-    bottom: 5px;
+    bottom: 0px;
     left: 50%;
     transform: translate(-50%, 0);
 /*    padding:30px;*/
@@ -370,8 +352,8 @@ footer p {
 
 
 .item {
-	margin-top:30px;
-	margin-bottom: 40px;
+/*	margin-top:30px;*/
+/*	margin-bottom: 40px;*/
 }
 .item > img {
 	display: block;
@@ -487,22 +469,30 @@ footer p {
 }
 
 
-
-
 .conediv {
     position: relative;
-/*    padding-bottom: 71.86%;*/
     text-align:center;
-}
-
-.coneimg {
-
 /*    position: absolute;*/
 /*    position:relative;*/
 /*    left: 0%;*/
 /*    width: 80%;*/
 /*    content: url('../img/sdss_cone_notext.png');*/
 }
+
+
+.coneimg {
+/*    position: relative;*/
+/*    padding-bottom: 71.86%;*/
+/*    text-align:center;*/
+	background: url('../img/sdss_cone_text.png') no-repeat center;
+	display: inline-block;
+    *display: inline;
+	background-size: contain;
+	
+/*	background-size: 100% 100%;*/
+	
+}
+
 
 
 
@@ -515,14 +505,26 @@ img.hovercone {
     margin: auto;
     max-width: 80%;
     max-height: 80%;
-	padding-bottom:50px;
+/*	opacity: 0.5;*/
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    cursor: pointer;
+
+	
 }
+
+
 
 /*img.hovercone:hover, */
-img.hovercone.hover {
-	content: url('../img/sdss_cone_text.png');
+.hover {
+	opacity: 0;
+/*	content: url('../img/sdss_cone_text.png');*/
 }
-
+img.hovercone.hover {
+	opacity: 0;
+}
 
 
 
@@ -616,10 +618,14 @@ cursor: pointer;
 
 
 
-#about {
+#slideshow {
     padding-top:50px;
 		background-color: black;
 }
+#slideshow h2 {
+	margin: 0;
+}
+
 
 #cone {
 	padding-top: 50px;
