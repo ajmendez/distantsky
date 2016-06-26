@@ -42,7 +42,7 @@
 	
 	// smooth links
 	var $root = $('html, body');
-	$('#Navigation a').click(function() {
+	$('ul.nav>li>a').click(function() {
 	    var href = $.attr(this, 'href');
 	    $root.animate({
 	        scrollTop: $(href).offset().top
