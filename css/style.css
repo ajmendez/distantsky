@@ -266,14 +266,28 @@ footer p {
 
 .owl-prev  {
     position: absolute;
-    left: 20px;
+    left: 10px;
     bottom: 50%;
 }
 .owl-next {
     position: absolute;
-    right: 20px;
+    right: 10px;
     bottom: 50%;
 }
+@media screen and (min-width: 950px) {
+    .owl-prev  {
+        position: absolute;
+        left: 150px;
+        bottom: 50%;
+    }
+    .owl-next {
+        position: absolute;
+        right: 150px;
+        bottom: 50%;
+    }
+}
+
+
 .owl-dots {
     position: absolute;
     bottom: 0px;
@@ -292,6 +306,8 @@ footer p {
     right:20px;
     bottom:40%;
 }
+
+
 
 
 
